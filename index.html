@@ -14,7 +14,7 @@
     }
 
     header {
-      background-color: #111;
+      background: linear-gradient(135deg, #2b2fdd, #8e2de2, #ff6ec4);
       color: white;
       padding: 20px;
       text-align: center;
@@ -28,6 +28,7 @@
       font-size: 30px;
       cursor: pointer;
       user-select: none;
+      color: white;
     }
 
     nav {
@@ -35,7 +36,7 @@
       position: absolute;
       top: 70px;
       left: 20px;
-      background-color: #222;
+      background-color: rgba(0, 0, 0, 0.8);
       border-radius: 10px;
       padding: 10px;
       z-index: 1000;
@@ -69,8 +70,13 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    
+    header h1 {
+  color: white;
+}
 
     h1, h2, h3 {
+      color: #2b2fdd;
       font-size: 1.8em;
       margin-bottom: 10px;
     }
@@ -94,7 +100,7 @@
     }
 
     a {
-      color: #0077b5;
+      color: #8e2de2;
     }
 
     footer {
@@ -152,7 +158,6 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -166,14 +171,12 @@
       <a href="#contato">Contato</a>
     </nav>
     <h1>Olá, eu sou Guilherme Gomes</h1>
-
     <img src="https://media.licdn.com/dms/image/v2/D4D03AQG5V4Z3VirLIQ/profile-displayphoto-shrink_800_800/B4DZVP5U4cGcAc-/0/1740802183745?e=1751500800&v=beta&t=urHE0MCuUqGylNI6nzoiurBySfMEluYZnjuRzLHIsJA"
          alt="Foto de perfil de Guilherme Gomes">
-
     <p>Bem-vindo ao meu Portfólio!</p>
   </header>
 
-  <main>
+ <main>
     <section id="sobre">
       <h2>Sobre Mim</h2>
       <p>Um estudante sempre buscando evoluir meus conhecimentos em Desenvolvimento de Sistemas e Suporte Técnico. Tenho facilidade em aprender novas ferramentas e estou constantemente em busca de aprimorar minhas habilidades técnicas.</p>
@@ -249,7 +252,6 @@
       <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/guilherme-gomes-1088b0248/" target="_blank">Guilherme Gomes</a></p>
     </section>
   </main>
-
   <footer>
     &copy; 2025 Guilherme Gomes. Todos os direitos reservados.
   </footer>
