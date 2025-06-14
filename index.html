@@ -4,234 +4,168 @@
   <meta charset="UTF-8">
   <title>Portfólio - Guilherme Gomes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #00f7ff;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background: linear-gradient(135deg, #2b2fdd, #8e2de2, #ff6ec4);
-      color: white;
-      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px 20px;
       text-align: center;
-      position: relative;
+      border-bottom: 2px solid #00f7ff;
     }
 
-    .menu-toggle {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 30px;
-      cursor: pointer;
-      user-select: none;
-      color: white;
-    }
-
-    nav {
-      display: none;
-      position: absolute;
-      top: 70px;
-      left: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 10px;
-      padding: 10px;
-      z-index: 1000;
-    }
-
-    nav a {
-      display: block;
-      color: white;
-      margin: 10px 0;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+    header h1 {
+      color: #00f7ff;
+      font-size: 2em;
     }
 
     header img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      object-fit: cover;
-      margin: 20px auto;
+      margin-top: 10px;
+      border: 3px solid #00f7ff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #121212;
+      border-top: 1px solid #00f7ff;
+      border-bottom: 1px solid #00f7ff;
+    }
+
+    nav a {
+      color: #00f7ff;
+      text-decoration: none;
+      margin: 10px 15px;
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff00c8;
+      text-shadow: 0 0 5px #ff00c8;
     }
 
     main {
-      max-width: 800px;
-      margin: 40px auto;
+      max-width: 900px;
+      margin: 30px auto;
       padding: 20px;
-      background: white;
+      background: rgba(0,0,0,0.7);
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px #00f7ff;
     }
-    
-    header h1 {
-  color: white;
-}
 
-    h1, h2, h3 {
-      color: #2b2fdd;
-      font-size: 1.8em;
-      margin-bottom: 10px;
+    h2 {
+      border-bottom: 2px solid #00f7ff;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      color: #00f7ff;
     }
 
     section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     ul {
-      list-style: none;
+      list-style-type: none;
       padding: 0;
     }
 
     li {
-      padding: 8px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    li:last-child {
-      border-bottom: none;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 3px solid #00f7ff;
     }
 
     a {
-      color: #8e2de2;
+      color: #00f7ff;
+    }
+
+    a:hover {
+      color: #ff00c8;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #777;
+      color: #888;
     }
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      main {
-        margin: 20px 10px;
-        padding: 15px;
-      }
-
-      header {
-        padding: 40px 20px;
-      }
-
-      h1 {
-        font-size: 1.5em;
-      }
-
-      header img {
-        width: 120px;
-        height: 120px;
-      }
-
-      .menu-toggle {
-        font-size: 28px;
-      }
-
+    @media (max-width: 600px) {
       nav {
-        top: 60px;
-        left: 10px;
-        width: 80%;
-      }
-
-      nav a {
-        margin: 8px 0;
-        font-size: 1em;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.2em;
-      }
-
-      header img {
-        width: 100px;
-        height: 100px;
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <nav id="menu">
-      <a href="#sobre">Sobre Mim</a>
-      <a href="#formacao">Formação</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#certificacoes">Certificados</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#experiencia">Experiência</a>
-      <a href="#contato">Contato</a>
-    </nav>
     <h1>Olá, eu sou Guilherme Gomes</h1>
-    <img src="https://media.licdn.com/dms/image/v2/D4D03AQG5V4Z3VirLIQ/profile-displayphoto-shrink_800_800/B4DZVP5U4cGcAc-/0/1740802183745?e=1751500800&v=beta&t=urHE0MCuUqGylNI6nzoiurBySfMEluYZnjuRzLHIsJA"
-         alt="Foto de perfil de Guilherme Gomes">
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQG5V4Z3VirLIQ/profile-displayphoto-shrink_800_800/B4DZVP5U4cGcAc-/0/1740802183745?e=1751500800&v=beta&t=urHE0MCuUqGylNI6nzoiurBySfMEluYZnjuRzLHIsJA" alt="Foto de perfil">
     <p>Bem-vindo ao meu Portfólio!</p>
   </header>
+  
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#formacao">Formação</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#certificacoes">Certificados</a>
+    <a href="#experiencia">Experiência</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
- <main>
+  <main>
     <section id="sobre">
       <h2>Sobre Mim</h2>
-      <p>Um estudante sempre buscando evoluir meus conhecimentos em Desenvolvimento de Sistemas e Suporte Técnico. Tenho facilidade em aprender novas ferramentas e estou constantemente em busca de aprimorar minhas habilidades técnicas.</p>
-      <p><strong>Localização:</strong> Barueri, São Paulo, Brasil</p>
+      <p>Estudante de ADS e técnico em eletrônica. Sempre buscando evoluir meus conhecimentos em desenvolvimento e suporte técnico.</p>
+      <p><strong>Localização:</strong> Barueri, SP</p>
     </section>
 
     <section id="formacao">
       <h2>Formação</h2>
       <ul>
-        <li>
-          🎓 <strong>Universidade Paulista (UNIP)</strong><br>
-          Graduação em Análise e Desenvolvimento de Sistemas<br>
-          📅 Fevereiro de 2024 - Dezembro de 2025
-        </li>
-        <li>
-          🎓 <strong>FIEB - Fundação Instituto de Educação de Barueri</strong><br>
-          Ensino Médio Profissionalizante (Pós-médio), Suporte e Manutenção em Informática<br>
-          📅 Fevereiro de 2021 - Dezembro de 2023
-        </li>
+        <li>🎓 UNIP - Análise e Desenvolvimento de Sistemas (2024-2025)</li>
+        <li>🎓 FIEB - Suporte e Manutenção em Informática (2021-2023)</li>
       </ul>
     </section>
 
     <section id="habilidades">
-      <h2>Habilidades</h2>
+      <h2>Habilidades e Tecnologias</h2>
       <ul>
-        <li>🛠 Suporte técnico</li>
-        <li>🌐 Redes de computadores</li>
-        <li>💻 Programação em C, C++, C#, Python</li>
-        <li>🎨 UI/UX Design</li>
-        <li>🧩 Figma</li>
-        <li>🖥️ Manutenção de hardware</li>
+        <li>💻 Programação: C, C++, C#, Python</li>
+        <li>🌐 Web: HTML5, CSS3, JavaScript</li>
+        <li>🎨 Design: UI/UX com Figma</li>
+        <li>🔧 Suporte técnico, redes, roteadores e manutenção de hardware</li>
+        <li>🧰 Ferramentas: Git, GitHub, Cisco Packet Tracer</li>
       </ul>
     </section>
 
     <section id="certificacoes">
-      <h2>Licenças e Certificados</h2>
+      <h2>Certificados</h2>
       <ul>
-        <li>
-          <strong>DESIGN UX/UI</strong> - Senai São Paulo<br>
-          Verificação emitida em fevereiro de 2025<br>
-          <a href="https://media.licdn.com/dms/image/v2/D4D2DAQED6DIFTsfmBg/profile-treasury-image-shrink_1280_1280/B4DZW_wHXgHwAQ-/0/1742678817421?e=1746302400&v=beta&t=aN9W2lWho3dB3DWyDhDyDlAHqd_WFFbo-wSLKYO5J_0" target="_blank">Ver certificado</a>
-        </li>
-        <li>
-          <strong>Cybersecurity Essentials</strong> - Cisco Networking Academy<br>
-          Verificação emitida em novembro de 2023<br>
-          <a href="https://media.licdn.com/dms/image/v2/D4D2DAQHebzq23HXpaw/profile-treasury-image-shrink_800_800/B4DZWcuaOEHYAc-/0/1742091167726?e=1746302400&v=beta&t=vvVgd0PlROV4sYCNqcQMzFBK4_GaOe1gg8ZcJ_zB3Ek" target="_blank">Ver certificado</a>
-        </li>
-        <li>
-          <strong>IT Essentials: PC Hardware and Software</strong> - Cisco Networking Academy<br>
-          Verificação emitida em dezembro de 2022<br>
-          <a href="https://media.licdn.com/dms/image/v2/D4D2DAQHfVtAXeLxJsA/profile-treasury-image-shrink_800_800/B4DZWcv3IZG4AY-/0/1742091552929?e=1746302400&v=beta&t=THpmdwdabWf5H71O2XggQksw969gLbchRkCrwsHFkDk" target="_blank">Ver certificado</a>
-        </li>
+        <li>UX/UI Design - SENAI (fev/2025)</li>
+        <li>Cybersecurity Essentials - Cisco (nov/2023)</li>
+        <li>IT Essentials - Cisco (dez/2022)</li>
       </ul>
     </section>
-
+    
     <section id="projetos">
       <h2>Projetos</h2>
       <p> Projetos em Produção 🛠</p>
@@ -240,36 +174,22 @@
     <section id="experiencia">
       <h2>Experiência</h2>
       <ul>
-        <li>💼 Auxiliar de Vendas (out de 2024 – o momento)<br> Suporte em vendas técnicas e elaboração de orçamentos.</li>
-        <li>💼 Telemarketing (mar de 2023 - out 2023)<br> Mediação entre o cliente e a transportadora, garantia de soluções rápidas e eficientes para cada problema.</li>
+        <li>💼 Auxiliar Técnico em Eletrônica (mai/2025 – atual)<br>Manutenção de hardware, configuração de roteadores Wi-Fi e suporte técnico geral.</li>
+        <li>💼 Auxiliar de Vendas (out/2024 – mai/2025)<br>Suporte em vendas técnicas e elaboração de orçamentos.</li>
+        <li>💼 Telemarketing (mar/2023 – out/2023)<br>Atendimento ao cliente e solução de problemas logísticos.</li>
       </ul>
     </section>
 
     <section id="contato">
       <h2>Contato</h2>
-      <p>📧 E-mail: <strong>guilhermegomesdasilvasouza@gmail.com</strong></p>
-      <p>📞 Telefone: <strong>(11) 93489-3357</strong></p>
-      <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/guilherme-gomes-1088b0248/" target="_blank">Guilherme Gomes</a></p>
+      <p>📧 Email: <strong>guilhermegomesdasilvasouza@gmail.com</strong></p>
+      <p>📞 WhatsApp: <a href="https://wa.me/5511934893357" target="_blank"><strong>(11) 93489-3357</strong></a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/guilherme-gomes-1088b0248/" target="_blank">LinkedIn</a></p>
     </section>
   </main>
+
   <footer>
     &copy; 2025 Guilherme Gomes. Todos os direitos reservados.
   </footer>
-
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-
-    menuToggle.addEventListener('click', function(event) {
-      event.stopPropagation();
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-    });
-
-    document.addEventListener('click', function(event) {
-      if (!menu.contains(event.target) && event.target !== menuToggle) {
-        menu.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 </html>
